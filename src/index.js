@@ -29,7 +29,6 @@ app.get("/products", async (req, res) => {
   const { limit } = req.query;
   try {
     const products = await manager.getProducts();
-    console.log(products)
     if (!limit) {
       res.status(200).json(products);
     } else {
